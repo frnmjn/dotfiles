@@ -1,0 +1,85 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "git.autofetch": true,
+  "workbench.editor.enablePreview": false,
+  "editor.suggestSelection": "first",
+  "gitlens.keymap": "none",
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDelete": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.insertFinalNewline": true,
+  "extensions.autoUpdate": true,
+  "update.showReleaseNotes": false,
+  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "editor.defaultFormatter": null,
+  "vsicons.dontShowNewVersionMessage": true,
+  "debug.javascript.autoAttachFilter": "always",
+  "debug.javascript.autoAttachSmartPattern": [
+    "${workspaceFolder}/**",
+    "!**/node_modules/**",
+    "**/$KNOWN_TOOLS$/**",
+    "!**package.json"
+  ],
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.inlineSuggest.enabled": true,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "githubPullRequests.pullBranch": "never",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "markdown.preview.fontSize": 18,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.fontSize": 16,
+  "debug.console.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "editor.accessibilitySupport": "off",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveWhenNoErrors": true,
+  "editor.autoClosingBrackets": "never",
+  "editor.minimap.enabled": false,
+  "editor.autoClosingQuotes": "never",
+  "workbench.iconTheme": "vscode-icons",
+  "terminal.external.osxExec": "WezTerm.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "diffEditor.maxComputationTime": 0,
+  "debug.allowBreakpointsEverywhere": true,
+  "rust-analyzer.inlayHints.parameterHints": true,
+  // "rust-analyzer.procMacro.enable": false,
+  "rust-analyzer.check.extraEnv": {
+    "CARGO_TARGET_DIR": "target/lsp"
+  },
+  "C_Cpp.errorSquiggles": "disabled",
+  // "rust-analyzer.cargo.features": ["integration_tests"],
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+  "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
+  "rust-analyzer.inlayHints.discriminantHints.enable": "always",
+  "cSpell.userWords": [
+    "bodyshops",
+    "chrono",
+    "itertools",
+    "millis",
+    "mockall",
+    "Peano",
+    "ripara",
+    "scatta"
+  ],
+  "files.associations": {
+    "config": "plaintext"
+  }
+}

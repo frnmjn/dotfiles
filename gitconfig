@@ -1,0 +1,8 @@
+[user]
+	name = Emilio Junior Francischetti
+	email = ejfrancischetti@gmail.com
+[core]
+	editor = hx
+	hooksPath = /Users/emiliofrancischetti/Repos/prima/security-hooks/hooks
+[push]
+	autoSetupRemote = true

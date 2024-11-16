@@ -1,0 +1,4 @@
+.gitattributes !filter !diff
+zsh/work.zsh filter=git-crypt diff=git-crypt
+ssh/id_ed25519 filter=git-crypt diff=git-crypt
+ssh/known_hosts filter=git-crypt diff=git-crypt

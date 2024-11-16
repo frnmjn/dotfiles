@@ -1,0 +1,320 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "cmd+f12",
+    "command": "-workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "alt+cmd+t",
+    "command": "-editor.action.refactor",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasSelection && editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-editor.action.formatDocument",
+    "when": "editorTextFocus && !editorHasSelection"
+  },
+  {
+    "key": "alt+left",
+    "command": "-breadcrumbs.focusPrevious",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "alt+left",
+    "command": "-cursorWordPartLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-editor.action.goToBottomHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-inlineChat.focus",
+    "when": "editorTextFocus && inlineChatVisible && !accessibilityModeEnabled && !inlineChatFocused && !isEmbeddedDiffEditor && inlineChatOuterCursorPosition == 'above'"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-notebook.focusBottom",
+    "when": "notebookEditorFocused && !inputFocus && notebookChatOuterFocusPosition == ''"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-list.select",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-list.stickyScrollselect",
+    "when": "treestickyScrollFocused"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-notebook.cell.chat.focus",
+    "when": "notebookEditorFocused && !inputFocus && notebookChatOuterFocusPosition == 'above'"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-problems.action.open",
+    "when": "problemFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-revealReference",
+    "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand && !treestickyScrollFocused"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-search.action.openResult",
+    "when": "fileMatchOrMatchFocus && searchViewletVisible"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "workbench.action.gotoLine"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "shift+space",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-explorer.openToSide",
+    "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.files.action.showActiveFileInExplorer",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+f",
+    "command": "-actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "cmd+f",
+    "command": "actions.find"
+  },
+  {
+    "key": "alt+s",
+    "command": "deleteWordLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "-deleteWordLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+f",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+7",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.navigateToLastEditLocation"
+  },
+  {
+    "key": "cmd+k cmd+q",
+    "command": "-workbench.action.navigateToLastEditLocation"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  {
+    "key": "shift+alt+[Comma]",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+d",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-deleteRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "f3",
+    "command": "-editor.action.nextMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+f3",
+    "command": "-editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "findWordAtCursor.next"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "findWordAtCursor.previous"
+  },
+  {
+    "key": "alt+l",
+    "command": "deleteWordRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+delete",
+    "command": "-deleteWordRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "cursorWordEndRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "-cursorWordEndRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "cursorWordLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+left",
+    "command": "-cursorWordLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "cursorWordStartRight"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "alt+\\",
+    "command": "-editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+  },
+  {
+    "key": "alt+h",
+    "command": "-testing.toggleTestingPeekHistory",
+    "when": "testing.isPeekVisible"
+  },
+  {
+    "key": "alt+h",
+    "command": "-editor.action.accessibilityHelpOpenHelpLink",
+    "when": "accessibilityHelpIsShown"
+  },
+  {
+    "key": "alt+h",
+    "command": "-gitlens.showQuickFileHistory",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  }
+]

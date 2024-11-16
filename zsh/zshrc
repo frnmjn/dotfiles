@@ -1,0 +1,49 @@
+# # Load Antigen
+source ~/.dotfiles/zsh/antigen.zsh
+
+# # Load Antigen configurations
+antigen init ~/.antigenrc
+
+source ~/.dotfiles/zsh/aliases.zsh
+source ~/.dotfiles/zsh/functions.zsh
+source ~/.dotfiles/zsh/work.zsh
+
+# Brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Dotnet
+# export PATH="/opt/homebrew/opt/dotnet/libexec:$PATH"
+
+# Qmk
+export PATH="/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin:$PATH"
+
+# K8s
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# Elixir
+export KERL_CONFIGURE_OPTIONS="--disable-jit --with-ssl=$(brew --prefix openssl@1.1) --with-odbc=$(brew --prefix unixodbc) --enable-wx --with-wx-config=$(which wx-config)"
+
+# Rust
+export PATH="/Users/emiliofrancischetti/.cargo/bin:$PATH"
+
+# Go
+# export GOPATH=$(asdf where golang)/packages
+# export GOROOT=$(asdf where golang)/go
+# export PATH="${PATH}:$(go env GOPATH)/bin"
+
+# Bin
+export PATH="/Users/emiliofrancischetti/bin:$PATH"
+export PATH="/Users/emiliofrancischetti/.local/bin:$PATH"
+
+# ADSF
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# VAULT
+export VAULT_ADDR=https://vault.helloprima.com:8200
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/emiliofrancischetti/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
