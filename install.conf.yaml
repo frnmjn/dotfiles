@@ -1,0 +1,12 @@
+- clean: ['~']
+
+- link:
+    ~/.wezterm.lua: wezterm.lua
+    ~/.gitconfig: gitconfig
+    ~/.zshenv: zsh/zshenv
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.config/helix:
+        path: helix
+        create: true
+
