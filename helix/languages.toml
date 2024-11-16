@@ -1,0 +1,10 @@
+[[language]]
+name = "elixir"
+language-servers = ["lexical"]
+
+[language-server.lexical]
+command = "/Users/emiliofrancischetti/Repos/frnmjn/lexical/_build/dev/package/lexical/bin/start_lexical.sh"
+
+[[language]]
+name = "heex"
+language-servers = ["lexical"]

@@ -1,0 +1,12 @@
+[user]
+	name = Emilio Junior Francischetti
+	email = ejfrancischetti@gmail.com
+[core]
+	editor = hx
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
