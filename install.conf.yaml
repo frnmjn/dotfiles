@@ -5,7 +5,7 @@
     ~/.gitconfig: gitconfig
     ~/.zshenv: zsh/zshenv
     ~/.zshrc: zsh/zshrc
-    ~/.oh-my-zsh: oh-my-zsh
+    ~/.antigenrc: zsh/antigenrc
     ~/.config/helix:
         path: helix
         create: true
