@@ -21,7 +21,7 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export KERL_CONFIGURE_OPTIONS="--disable-jit --with-ssl=$(brew --prefix openssl@1.1) --with-odbc=$(brew --prefix unixodbc) --enable-wx --with-wx-config=$(which wx-config)"
 
 #Rust
-export PATH="$PATH:/Users/emiliofrancischetti/.cargo/bin"
+export PATH="/Users/emiliofrancischetti/.cargo/bin:$PATH"
 
 # Rancher
 export PATH="/Users/emiliofrancischetti/.rd/bin:$PATH"
