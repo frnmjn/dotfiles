@@ -14,6 +14,7 @@ alias gcm="git commit"
 alias gpm="git pull --rebase origin master"
 alias gp="git push"
 alias gpf="git push --force"
+alias gco="git checkout"
 alias gcom="git checkout master && gpm"
 alias gcob="git checkout -b"
 alias gss="git stash -u"
@@ -27,24 +28,29 @@ alias grs="git rebase --skip"
 alias gca="git commit --amend"
 
 # DOCKER
-alias dps="docker ps --format='table {{.Id}}\t{{.Names}}\t{{.Image}}\t{{.Ports}}\t{{.Status}}'"
+alias dps="docker ps --format='table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Ports}}\t{{.Status}}'"
 alias dpsa="docker ps -a --format='table {{.Names}}\t{{.Image}}\t{{.Ports}}\t{{.Status}}'"
 alias dc='docker rm -f $(docker ps -a -q)'
 alias dra='docker rm -f $(docker ps -a -q)'
 alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 alias dcr="dcd && dcu"
+alias dl="docker logs -f"
+alias de="docker exec -it"
+alias dr="docker restart"
+alias ds="docker stop"
 
 # KUBERNETES
+alias k="kubectl"
 alias ka="kubectl apply -f"
 alias kd="kubectl delete -f"
 alias 9="k9s"
-alias k="kubectl"
 alias kctx="kubectl-ctx"
 alias kns="kubectl-ns"
 
 # Elixir
 alias m="mix"
+alias mf="mix format"
 alias mdg="mix deps.get"
 alias mdca="mix deps.clean --all"
 alias mc="mix compile"

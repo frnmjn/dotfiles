@@ -18,10 +18,10 @@ config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.color_scheme = 'AdventureTime'
 config.window_decorations = 'RESIZE'
 
-config.send_composed_key_when_left_alt_is_pressed = false
 
 -- needed for symbol keys
-config.send_composed_key_when_right_alt_is_pressed = true
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = false
 config.use_dead_keys = false
 config.use_ime = false
 

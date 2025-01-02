@@ -16,8 +16,8 @@ color-modes = true
 enable = false
 
 [editor.file-picker]
-hidden = false
-git-ignore = false
+hidden = true
+git-ignore = true
 
 [editor.lsp]
 display-messages = true
