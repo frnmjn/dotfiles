@@ -27,6 +27,8 @@ alias gra="git rebase --abort"
 alias grs="git rebase --skip"
 alias gca="git commit --amend"
 
+alias ghdaa="gh run list --json databaseId  -q '.[].databaseId' | xargs -IID gh run delete ID"
+
 # DOCKER
 alias dps="docker ps --format='table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Ports}}\t{{.Status}}'"
 alias dpsa="docker ps -a --format='table {{.Names}}\t{{.Image}}\t{{.Ports}}\t{{.Status}}'"

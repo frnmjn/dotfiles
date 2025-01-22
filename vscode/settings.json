@@ -58,11 +58,8 @@
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "diffEditor.maxComputationTime": 0,
-  "rust-analyzer.cargo.extraArgs": [
-    "--features",
-    "dev"
-  ],
-  "cSpell.userWords": [
-    "dtsi"
-  ]
+  "rust-analyzer.cargo.extraArgs": ["--features", "dev"],
+  "cSpell.userWords": ["dtsi"],
+  "debug.allowBreakpointsEverywhere": true,
+  "rust-analyzer.procMacro.enable": false
 }
