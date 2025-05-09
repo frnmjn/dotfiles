@@ -70,8 +70,10 @@
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
   "rust-analyzer.inlayHints.discriminantHints.enable": "always",
   "cSpell.userWords": [
+    "achordion",
     "bodyshops",
     "chrono",
+    "Intermidiaries",
     "itertools",
     "millis",
     "mockall",
@@ -81,5 +83,9 @@
   ],
   "files.associations": {
     "config": "plaintext"
-  }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "rust-analyzer.diagnostics.previewRustcOutput": true
 }

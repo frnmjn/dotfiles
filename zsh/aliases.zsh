@@ -4,9 +4,11 @@ alias e="exit"
 alias ps="ps -Ao user,pid,%cpu,%mem,vsz,rss,tt,stat,start,time,command"
 
 # EDITOR
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias c="code ."
+alias z="open -a /Applications/Zed.app ."
 
 # GIT
 alias gs="git status"
@@ -51,13 +53,13 @@ alias 9="k9s"
 alias kctx="kubectl-ctx"
 alias kns="kubectl-ns"
 
-# Rust
+# RUST
 alias cc="cargo check"
 alias cmt="cargo make test"
 alias cmci="cargo make clippy-ci"
 alias cf="cargo fmt"
 
-# Elixir
+# ELIXIR
 alias m="mix"
 alias mf="mix format"
 alias mdg="mix deps.get"
@@ -68,5 +70,3 @@ alias mem="mix ecto.migrate"
 alias mt="mix test"
 alias mtf="mix test --failed"
 alias ms="mix phx.server"
-
-
