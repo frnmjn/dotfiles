@@ -38,9 +38,6 @@ export PATH="/Users/emiliofrancischetti/.cargo/bin:$PATH"
 export PATH="/Users/emiliofrancischetti/bin:$PATH"
 export PATH="/Users/emiliofrancischetti/.local/bin:$PATH"
 
-# ADSF
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 # VAULT
 export VAULT_ADDR=https://vault.helloprima.com:8200
 
@@ -53,3 +50,6 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
 eval "$(direnv hook zsh)"
+
+# ADSF
+. /opt/homebrew/opt/asdf/libexec/asdf.sh

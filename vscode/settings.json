@@ -3,18 +3,12 @@
   "git.autofetch": true,
   "workbench.editor.enablePreview": false,
   "editor.suggestSelection": "first",
-  "gitlens.keymap": "none",
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDelete": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "files.insertFinalNewline": true,
   "extensions.autoUpdate": true,
   "update.showReleaseNotes": false,
   "explorer.confirmDragAndDrop": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "git.confirmSync": false,
   "editor.defaultFormatter": null,
   "vsicons.dontShowNewVersionMessage": true,
@@ -26,7 +20,7 @@
     "!**package.json"
   ],
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.enabled": false,
   "githubPullRequests.terminalLinksHandler": "github",
   "githubPullRequests.pullBranch": "never",
   "[json]": {
@@ -60,7 +54,7 @@
   "diffEditor.maxComputationTime": 0,
   "debug.allowBreakpointsEverywhere": true,
   "rust-analyzer.inlayHints.parameterHints": true,
-  // "rust-analyzer.procMacro.enable": false,
+  "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.check.extraEnv": {
     "CARGO_TARGET_DIR": "target/lsp"
   },
@@ -73,19 +67,46 @@
     "achordion",
     "bodyshops",
     "chrono",
+    "healthcheck",
     "Intermidiaries",
     "itertools",
+    "keymap",
     "millis",
     "mockall",
+    "paybylink",
     "Peano",
     "ripara",
-    "scatta"
+    "scatta",
+    "sqlx",
+    "thiserror"
   ],
   "files.associations": {
-    "config": "plaintext"
+    "config": "plaintext",
+    "*.yaml": "yaml"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "rust-analyzer.diagnostics.previewRustcOutput": true
+  "rust-analyzer.diagnostics.previewRustcOutput": true,
+  // "protoc": {
+  //   "options": [
+  //     "--proto_path=protos/v3",
+  //     "--proto_path=${workspaceRoot}/bin/rpc/proto"
+  //   ]
+  // },
+  "rust-analyzer.diagnostics.remapPrefix": {},
+  "[yaml]": {
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "editor.quickSuggestions": {
+      "strings": "on"
+    }
+  },
+  "[proto3]": {
+    "editor.defaultFormatter": "bufbuild.vscode-buf"
+  }
 }

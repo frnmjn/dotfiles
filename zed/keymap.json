@@ -1,0 +1,125 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "cmd-w": "workspace::CloseWindow",
+      "cmd-,": "zed::OpenSettings",
+      "cmd-q": "zed::Quit",
+      "ctrl-r": "file_finder::Toggle",
+      "cmd-shift-r": "search::ToggleReplace",
+      "enter": "menu::Confirm"
+    }
+  },
+  {
+    "context": "Workspace > Pane > Editor",
+    "bindings": {
+      "cmd-+": [
+        "zed::IncreaseBufferFontSize",
+        {
+          "persist": false
+        }
+      ],
+      "cmd--": [
+        "zed::DecreaseBufferFontSize",
+        {
+          "persist": false
+        }
+      ],
+      "cmd-0": [
+        "zed::ResetBufferFontSize",
+        {
+          "persist": false
+        }
+      ],
+      "ctrl-j": "editor::FindNextMatch",
+      "ctrl-k": "editor::FindPreviousMatch",
+      "alt-s": "editor::DeleteLine",
+      "enter": "editor::Newline",
+      "ctrl-enter": "editor::GoToDefinition",
+      "ctrl-shift-enter": "editor::FindAllReferences",
+      "ctrl-h": "pane::GoBack",
+      "ctrl-l": "pane::GoForward",
+      "backspace": "editor::Backspace",
+      "delete": "editor::Delete",
+      "cmd-left": [
+        "editor::MoveToBeginningOfLine",
+        {
+          "stop_at_soft_wraps": true,
+          "stop_at_indent": true
+        }
+      ],
+      "cmd-right": [
+        "editor::MoveToEndOfLine",
+        {
+          "stop_at_soft_wraps": true
+        }
+      ],
+      "cmd-z": "editor::Undo",
+      "cmd-shift-z": "editor::Redo",
+      "cmd-x": "editor::Cut",
+      "cmd-c": "editor::Copy",
+      "cmd-v": "editor::Paste",
+      "tab": "editor::Tab",
+      "cmd-s": "workspace::Save",
+      "left": "editor::MoveLeft",
+      "right": "editor::MoveRight",
+      "up": "editor::MoveUp",
+      "down": "editor::MoveDown",
+      "alt-f": "editor::ToggleComments",
+      "cmd-j": "editor::JoinLines",
+      "alt-;": "editor::GoToPreviousChange",
+      "ctrl-shift-l": "panel::NextPanelTab",
+      "cmd-f": "buffer_search::Deploy",
+      "cmd-r": "buffer_search::DeployReplace",
+      "alt-l": "editor::SelectToNextWordEnd",
+      "alt-h": "editor::SelectToPreviousWordStart",
+      "cmd-shift-left": [
+        "editor::SelectToBeginningOfLine",
+        {
+          "stop_at_soft_wraps": true,
+          "stop_at_indent": true
+        }
+      ],
+      "cmd-shift-right": [
+        "editor::SelectToEndOfLine",
+        {
+          "stop_at_soft_wraps": true
+        }
+      ],
+      "shift-left": [
+        "editor::SelectToBeginningOfLine",
+        {
+          "stop_at_soft_wraps": true,
+          "stop_at_indent": true
+        }
+      ],
+      "shift-right": "vim::SelectNext"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion",
+      "up": "editor::ContextMenuPrevious",
+      "down": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "Workspace > Pane > BufferSearchBar > Editor",
+    "bindings": {
+      "down": "search::SelectNextMatch",
+      "up": "search::SelectPreviousMatch",
+      "backspace": "editor::Backspace",
+      "escape": "buffer_search::Dismiss",
+      "enter": null,
+      "tab": "buffer_search::DeployReplace",
+      "cmd-a": "search::ToggleCaseSensitive"
+    }
+  }
+]

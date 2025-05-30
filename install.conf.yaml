@@ -26,6 +26,8 @@
     ~/Library/Application Support/Code/User/tasks.json: vscode/tasks.json
     ~/Library/Application Support/Code/User/snippets: vscode/snippets
     ~/.Brewfile: Brewfile
+    ~/.config/zed/settings.json: zed/settings.json
+    ~/.config/zed/keymap.json: zed/keymap.json
 
 - shell:
     - chmod 600 ~/.ssh/id_ed25519
