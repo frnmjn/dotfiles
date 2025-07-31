@@ -1,9 +1,9 @@
-{
+{ 
 	"pi": {
 		"prefix": "pi",
 		"body": [
 			"|> IO.inspect(label: \"$0\")"
 		],
-		"description": "Dbg in pipe"
+		"description": "Inspect in pipe"
 	}
 }

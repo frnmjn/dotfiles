@@ -1,0 +1,74 @@
+{
+    "derive": {
+        "prefix": "derive",
+        "body": [
+            "#[derive($0)]"
+        ],
+        "description": "Derive"
+    },
+    "some": {
+        "prefix": "some",
+        "body": [
+            "Some("
+        ],
+        "description": "Some"
+    },
+    "dbg": {
+        "prefix": "dbg",
+        "body": [
+            "dbg!($0);"
+        ],
+        "description": "dbg"
+    },
+    "uuid": {
+        "prefix": "uuid",
+        "body": [
+            "Uuid"
+        ],
+        "description": "uuid"
+    },
+    "str": {
+        "prefix": "str",
+        "body": [
+            "&str"
+        ],
+        "description": "str ref"
+    },
+    "lambda": {
+        "prefix": "lambda",
+        "body": [
+            "|$0| {}"
+        ],
+        "description": "lambda"
+    },
+    "tests": {
+        "prefix": "tests",
+        "body": [
+            "#[cfg(test)]",
+            "mod test {",
+            "",
+            "    use super::*;",
+            "",
+            "    async fn $0() {",
+            "    }",
+            "}"
+        ],
+        "description": "tests"
+    },
+    "async fn": {
+        "prefix": "afn",
+        "body": [
+            "async fn $0() {}",
+            ""
+        ],
+        "description": "async fn"
+    },
+    "fn": {
+        "prefix": "fn ",
+        "body": [
+            "fn $0() {}",
+            ""
+        ],
+        "description": "fn"
+    }
+}

@@ -41,10 +41,6 @@ export PATH="/Users/emiliofrancischetti/.local/bin:$PATH"
 # VAULT
 export VAULT_ADDR=https://vault.helloprima.com:8200
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/emiliofrancischetti/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 # NIX
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh
@@ -53,3 +49,10 @@ eval "$(direnv hook zsh)"
 
 # ADSF
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Ulimit
+ulimit -n 10240
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/emiliofrancischetti/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

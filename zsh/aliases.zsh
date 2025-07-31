@@ -2,6 +2,7 @@
 alias h="history"
 alias e="exit"
 alias ps="ps -Ao user,pid,%cpu,%mem,vsz,rss,tt,stat,start,time,command"
+alias space="du -sh *  | grep -E \"\dG\""
 
 # EDITOR
 alias v="nvim"
@@ -11,7 +12,9 @@ alias c="code ."
 alias z="open -a /Applications/Zed.app ."
 
 # GIT
+alias g="git"
 alias gs="git status"
+alias gw="git switch"
 alias gaa="git add *"
 alias gcm="git commit"
 alias gpm="git pull --rebase origin master"
@@ -29,7 +32,6 @@ alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 alias grs="git rebase --skip"
 alias gca="git commit --amend"
-
 alias ghdaa="gh run list --json databaseId  -q '.[].databaseId' | xargs -IID gh run delete ID"
 
 # DOCKER
@@ -55,9 +57,11 @@ alias kns="kubectl-ns"
 
 # RUST
 alias cc="cargo check"
+alias ct="cargo make test"
+alias cf="cargo fmt"
+alias cm="cargo make"
 alias cmt="cargo make test"
 alias cmci="cargo make clippy-ci"
-alias cf="cargo fmt"
 
 # ELIXIR
 alias m="mix"

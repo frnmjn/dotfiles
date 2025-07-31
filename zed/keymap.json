@@ -8,12 +8,26 @@
 [
   {
     "bindings": {
-      "cmd-w": "workspace::CloseWindow",
       "cmd-,": "zed::OpenSettings",
+      "cmd-, cmd-,": "zed::OpenKeymap",
       "cmd-q": "zed::Quit",
       "ctrl-r": "file_finder::Toggle",
-      "cmd-shift-r": "search::ToggleReplace",
-      "enter": "menu::Confirm"
+      "enter": "menu::Confirm",
+      "cmd-shift-p": "command_palette::Toggle",
+      "cmd-shift-f": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Picker",
+    "bindings": {
+      "backspace": "editor::Backspace",
+      "escape": "menu::Cancel"
     }
   },
   {
@@ -92,14 +106,14 @@
           "stop_at_soft_wraps": true
         }
       ],
-      "shift-left": [
-        "editor::SelectToBeginningOfLine",
-        {
-          "stop_at_soft_wraps": true,
-          "stop_at_indent": true
-        }
-      ],
-      "shift-right": "vim::SelectNext"
+      "shift-left": "editor::SelectToPreviousSubwordStart",
+      "shift-right": "editor::SelectToNextSubwordEnd",
+      "escape": "editor::Cancel",
+      "shift-down": "editor::SelectDown",
+      "shift-up": "editor::SelectUp",
+      "alt-backspace": "editor::DeleteToPreviousWordStart",
+      "pageup": "editor::PageUp",
+      "pagedown": "editor::PageDown"
     }
   },
   {
@@ -107,7 +121,15 @@
     "bindings": {
       "enter": "editor::ConfirmCompletion",
       "up": "editor::ContextMenuPrevious",
-      "down": "editor::ContextMenuNext"
+      "down": "editor::ContextMenuNext",
+      "escape": "editor::Cancel"
+    }
+  },
+  {
+    "context": "Workspace > Pane > ProjectSearchBar > Editor",
+    "bindings": {
+      "backspace": "editor::Backspace",
+      "cmd-shift-r": "search::ToggleReplace"
     }
   },
   {
@@ -115,11 +137,32 @@
     "bindings": {
       "down": "search::SelectNextMatch",
       "up": "search::SelectPreviousMatch",
+      "escape": "buffer_search::Dismiss"
+    }
+  },
+  {
+    "context": "Workspace > Pane > ProjectSearchBar > Editor",
+    "bindings": {
+      "escape": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Workspace > Pane > (ProjectSearchBar || BufferSearchBar) > Editor",
+    "bindings": {
       "backspace": "editor::Backspace",
-      "escape": "buffer_search::Dismiss",
-      "enter": null,
-      "tab": "buffer_search::DeployReplace",
-      "cmd-a": "search::ToggleCaseSensitive"
+      "cmd-r": "search::ToggleReplace",
+      "cmd-a": "search::ToggleCaseSensitive",
+      "cmd-s": "search::ToggleWholeWord",
+      "cmd-d": "search::ToggleRegex",
+      "cmd-f": "project_search::ToggleFilters"
+    }
+  },
+  {
+    "context": "BuffersearchBar && in_replace > Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "enter": "search::ReplaceNext",
+      "cmd-enter": "search::ReplaceAll"
     }
   }
 ]
