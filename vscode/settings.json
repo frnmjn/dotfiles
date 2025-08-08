@@ -3,6 +3,7 @@
   "debug.console.fontSize": 17,
   "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.maxComputationTime": 0,
+  "disable-default-keybinding.runOnChange": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "beforeWhitespace",
   "editor.autoClosingComments": "beforeWhitespace",
@@ -12,7 +13,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.inlineSuggest.enabled": false,
+  "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "editor.suggestSelection": "first",
   "explorer.confirmDelete": false,
@@ -52,5 +53,4 @@
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none"
-  // "disable-default-keybinding.runOnChange": true
 }

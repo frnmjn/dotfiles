@@ -37,17 +37,17 @@
   },
   {
     "command": "workbench.action.navigateToLastEditLocation",
-    "key": "alt+h",
+    "key": "cmd+;",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
     "command": "workbench.action.navigateBack",
-    "key": "ctrl+h",
+    "key": "cmd+h",
     "when": "canNavigateBack"
   },
   {
     "command": "workbench.action.navigateForward",
-    "key": "ctrl+l",
+    "key": "cmd+l",
     "when": "canNavigateForward"
   },
   {
@@ -82,7 +82,7 @@
   },
   {
     "command": "deleteWordLeft",
-    "key": "alt+s",
+    "key": "alt+h",
     "when": "textInputFocus && !editorReadonly"
   },
   {
@@ -91,36 +91,8 @@
     "when": "textInputFocus && !editorReadonly"
   },
   {
-    "command": "cursorWordEndRight",
-    "key": "ctrl+d",
-    "when": "textInputFocus"
-  },
-  {
-    "command": "cursorWordEndLeft",
-    "key": "ctrl+f",
-    "when": "textInputFocus"
-  },
-  {
-    "command": "cursorWordStartRight",
-    "key": "ctrl+s"
-  },
-  {
-    "command": "cursorWordEndRight",
-    "key": "ctrl+d",
-    "when": "textInputFocus"
-  },
-  {
-    "command": "cursorWordEndLeft",
-    "key": "ctrl+f",
-    "when": "textInputFocus"
-  },
-  {
     "command": "workbench.action.quickOpen",
     "key": "ctrl+r"
-  },
-  {
-    "command": "cursorWordStartRightSelect",
-    "key": "ctrl+shift+s"
   },
   {
     "command": "editor.action.moveLinesDownAction",
@@ -171,6 +143,65 @@
     "command": "deleteInsideWord"
   },
   {
+    "key": "shift+cmd+i",
+    "command": "rust-analyzer.restartServer"
+  },
+  {
+    "key": "f10",
+    "command": "-extension.node-debug.startWithStopOnEntry",
+    "when": "!inDebugMode && debugConfigurationType == 'node' || !inDebugMode && debugConfigurationType == 'pwa-extensionHost' || !inDebugMode && debugConfigurationType == 'pwa-node'"
+  },
+  {
+    "key": "f11",
+    "command": "-extension.node-debug.startWithStopOnEntry",
+    "when": "!inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'node' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-extensionHost' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-node'"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "-git.revertSelectedRanges",
+    "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+  },
+  {
+    "key": "cmd+k alt+cmd+s",
+    "command": "-git.stageSelectedRanges",
+    "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+  },
+  {
+    "key": "cmd+k cmd+n",
+    "command": "-git.unstageSelectedRanges",
+    "when": "editorTextFocus && isInDiffEditor && isInDiffRightEditor && !operationInProgress && resourceScheme == 'git'"
+  },
+  {
+    "key": "f4",
+    "command": "-references-view.next",
+    "when": "reference-list.hasResult && references-view.canNavigate"
+  },
+  {
+    "key": "shift+f4",
+    "command": "-references-view.prev",
+    "when": "reference-list.hasResult && references-view.canNavigate"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "cmd+k v",
+    "command": "-markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "shift+alt+f12",
+    "command": "-references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-references-view.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider"
+  },
+  {
     "key": "1",
     "command": "-gitlens.views.scm.grouped.commits",
     "when": "config.gitlens.views.scm.grouped.views.commits && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
@@ -181,440 +212,748 @@
     "when": "config.gitlens.views.scm.grouped.views.contributors && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
   },
   {
-    "key": "shift+alt+h",
-    "command": "-references-view.showCallHierarchy",
-    "when": "editorHasCallHierarchyProvider"
-},
-{
+    "key": "cmd+c",
+    "command": "-gitlens.views.branches.copy",
+    "when": "focusedView == 'gitlens.views.branches'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.commits.copy",
+    "when": "focusedView == 'gitlens.views.commits'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.contributors.copy",
+    "when": "focusedView == 'gitlens.views.contributors'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.drafts.copy",
+    "when": "focusedView == 'gitlens.views.drafts'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.fileHistory.copy",
+    "when": "focusedView == 'gitlens.views.fileHistory'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.lineHistory.copy",
+    "when": "focusedView == 'gitlens.views.lineHistory'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.pullRequest.copy",
+    "when": "focusedView == 'gitlens.views.pullRequest'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.remotes.copy",
+    "when": "focusedView == 'gitlens.views.remotes'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.repositories.copy",
+    "when": "focusedView == 'gitlens.views.repositories'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.searchAndCompare.copy",
+    "when": "focusedView == 'gitlens.views.searchAndCompare'"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-gitlens.views.stashes.copy",
+    "when": "focusedView == 'gitlens.views.stashes'"
+  },
+  {
+    "key": "2",
+    "command": "-gitlens.views.scm.grouped.worktrees",
+    "when": "config.gitlens.views.scm.grouped.views.worktrees && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+  },
+  {
+    "key": "alt+,",
+    "command": "-gitlens.key.alt+,",
+    "when": "gitlens:key:,"
+  },
+  {
+    "key": "alt+.",
+    "command": "-gitlens.key.alt+.",
+    "when": "gitlens:key:."
+  },
+  {
+    "key": "alt+enter",
+    "command": "-gitlens.key.alt+enter",
+    "when": "gitlens:key:alt+enter"
+  },
+  {
+    "key": "alt+left",
+    "command": "-gitlens.key.alt+left",
+    "when": "gitlens:key:alt+left"
+  },
+  {
+    "key": "alt+right",
+    "command": "-gitlens.key.alt+right",
+    "when": "gitlens:key:alt+right"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-gitlens.key.ctrl+enter",
+    "when": "gitlens:key:ctrl+enter"
+  },
+  {
+    "key": "cmd+left",
+    "command": "-gitlens.key.ctrl+left",
+    "when": "gitlens:key:ctrl+left"
+  },
+  {
+    "key": "cmd+right",
+    "command": "-gitlens.key.ctrl+right",
+    "when": "gitlens:key:ctrl+right"
+  },
+  {
+    "key": "escape",
+    "command": "-gitlens.key.escape",
+    "when": "editorTextFocus && gitlens:key:escape && !codeActionMenuVisible && !findWidgetVisible && !isInEmbeddedEditor && !parameterHintsVisible && !quickFixWidgetVisible && !referenceSearchVisible && !renameInputVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "left",
+    "command": "-gitlens.key.left",
+    "when": "gitlens:key:left"
+  },
+  {
+    "key": "right",
+    "command": "-gitlens.key.right",
+    "when": "gitlens:key:right"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "-editor.action.accessibleViewAcceptInlineCompletion",
+    "when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
+  },
+  {
+    "key": "tab",
+    "command": "-editor.action.inlineSuggest.commit",
+    "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "-editor.action.inlineSuggest.commit",
+    "when": "inInlineEditsPreviewEditor"
+  },
+  {
+    "key": "cmd+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly"
+  },
+  {
+    "key": "f7",
+    "command": "-editor.action.accessibleDiffViewer.next",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "shift+f7",
+    "command": "-editor.action.accessibleDiffViewer.prev",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "alt+cmd+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+i",
+    "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+c",
+    "command": "-editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "space",
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-explorer.openToSide",
+    "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "-filesExplorer.openFilePreserveFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "cmd+k e",
+    "command": "-workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "-workbench.action.terminal.sendSequence",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "-deleteWordLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+backspace",
+    "command": "-deleteWordPartLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+h",
+    "command": "-testing.toggleTestingPeekHistory",
+    "when": "testing.isPeekVisible"
+  },
+  {
+    "key": "alt+h",
+    "command": "-editor.action.accessibilityHelpOpenHelpLink",
+    "when": "accessibilityHelpIsShown"
+  },
+  {
     "key": "alt+,",
     "command": "-gitlens.key.alt+,",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+.",
     "command": "-gitlens.key.alt+.",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+enter",
     "command": "-gitlens.key.alt+enter",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+left",
     "command": "-gitlens.key.alt+left",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+right",
     "command": "-gitlens.key.alt+right",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "ctrl+enter",
     "command": "-gitlens.key.ctrl+enter",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+left",
     "command": "-gitlens.key.ctrl+left",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+right",
     "command": "-gitlens.key.ctrl+right",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "escape",
     "command": "-gitlens.key.escape",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "left",
     "command": "-gitlens.key.left",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "right",
     "command": "-gitlens.key.right",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g shift+,",
     "command": "-gitlens.diffLineWithPrevious",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "shift+alt+,",
     "command": "-gitlens.diffLineWithPrevious",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+.",
     "command": "-gitlens.diffWithNext",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g .",
     "command": "-gitlens.diffWithNext",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+,",
     "command": "-gitlens.diffWithPrevious",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g ,",
     "command": "-gitlens.diffWithPrevious",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g shift+.",
     "command": "-gitlens.diffWithWorking",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "shift+alt+.",
     "command": "-gitlens.diffWithWorking",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+/",
     "command": "-gitlens.gitCommands",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g /",
     "command": "-gitlens.gitCommands",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+c",
     "command": "-gitlens.showQuickCommitFileDetails",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g c",
     "command": "-gitlens.showQuickCommitFileDetails",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+h",
     "command": "-gitlens.showQuickFileHistory",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g h",
     "command": "-gitlens.showQuickFileHistory",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g shift+h",
     "command": "-gitlens.showQuickRepoHistory",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "shift+alt+h",
     "command": "-gitlens.showQuickRepoHistory",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+s",
     "command": "-gitlens.showQuickRepoStatus",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g s",
     "command": "-gitlens.showQuickRepoStatus",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g shift+b",
     "command": "-gitlens.toggleCodeLens",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "shift+alt+b",
     "command": "-gitlens.toggleCodeLens",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+b",
     "command": "-gitlens.toggleFileBlame",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+g b",
     "command": "-gitlens.toggleFileBlame",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.branches.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.commits.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.contributors.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.drafts.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.fileHistory.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.lineHistory.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.pullRequest.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.remotes.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.repositories.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "3",
     "command": "-gitlens.views.scm.grouped.branches",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "1",
     "command": "-gitlens.views.scm.grouped.commits",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "7",
     "command": "-gitlens.views.scm.grouped.contributors",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "8",
     "command": "-gitlens.views.scm.grouped.fileHistory",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "9",
     "command": "-gitlens.views.scm.grouped.launchpad",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "4",
     "command": "-gitlens.views.scm.grouped.remotes",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "0",
     "command": "-gitlens.views.scm.grouped.searchAndCompare",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "5",
     "command": "-gitlens.views.scm.grouped.stashes",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "6",
     "command": "-gitlens.views.scm.grouped.tags",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "2",
     "command": "-gitlens.views.scm.grouped.worktrees",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.searchAndCompare.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.stashes.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.tags.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.workspaces.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+c",
     "command": "-gitlens.views.worktrees.copy",
     "extensionId": "eamodio.gitlens",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "ctrl+/",
     "command": "-github.copilot.acceptCursorPanelSolution",
     "extensionId": "GitHub.copilot",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+[",
     "command": "-github.copilot.previousPanelSolution",
     "extensionId": "GitHub.copilot",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+]",
     "command": "-github.copilot.nextPanelSolution",
     "extensionId": "GitHub.copilot",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "ctrl+shift+/",
     "command": "-github.copilot.acceptCursorComparisonPanelSolution",
     "extensionId": "GitHub.copilot",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+shift+[",
     "command": "-github.copilot.previousComparisonPanelSolution",
     "extensionId": "GitHub.copilot",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+shift+]",
     "command": "-github.copilot.nextComparisonPanelSolution",
     "extensionId": "GitHub.copilot",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "alt+\\",
     "command": "-editor.action.inlineSuggest.trigger",
     "extensionId": "GitHub.copilot",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+alt+.",
     "command": "-github.copilot.chat.rerunWithCopilotDebug",
     "extensionId": "GitHub.copilot-chat",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "ctrl+shift+space",
     "command": "-issue.suggestRefresh",
     "extensionId": "GitHub.vscode-pull-request-github",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+s",
     "command": "-issue.createIssueFromFile",
     "extensionId": "GitHub.vscode-pull-request-github",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+enter",
     "command": "-issue.createIssueFromFile",
     "extensionId": "GitHub.vscode-pull-request-github",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "cmd+k m",
     "command": "-pr.makeSuggestion",
     "extensionId": "GitHub.vscode-pull-request-github",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "ctrl+shift+u",
     "command": "-rust-analyzer.parentModule",
     "extensionId": "rust-lang.rust-analyzer",
     "registeredBy": "cormoran.disable-default-keybinding"
-},
-{
+  },
+  {
     "key": "ctrl+shift+j",
     "command": "-rust-analyzer.joinLines",
     "extensionId": "rust-lang.rust-analyzer",
     "registeredBy": "cormoran.disable-default-keybinding"
-}
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newChat",
+    "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-notebook.centerActiveCell",
+    "when": "notebookEditorFocused"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "-cursorWordEndRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "-cursorWordEndRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+f3",
+    "command": "-notebook.diff.action.next",
+    "when": "activeEditor == 'workbench.editor.notebookTextDiffEditor'"
+  },
+  {
+    "key": "shift+alt+f3",
+    "command": "-notebook.diff.action.previous",
+    "when": "activeEditor == 'workbench.editor.notebookTextDiffEditor'"
+  },
+  {
+    "key": "alt+left",
+    "command": "-cursorWordLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "-cursorWordLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "-cursorWordPartLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+left",
+    "command": "-cursorWordPartLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "-cursorWordPartRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+right",
+    "command": "-cursorWordPartRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "cursorWordStartRight"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "cursorWordStartLeft"
+  },
+  {
+    "key": "cmd+right",
+    "command": "-cursorWordAccessibilityRight",
+    "when": "accessibilityModeEnabled && isWindows && textInputFocus && focusedView == 'workbench.panel.output'"
+  },
+  {
+    "key": "shift+cmd+right",
+    "command": "-cursorWordAccessibilityRightSelect",
+    "when": "accessibilityModeEnabled && isWindows && textInputFocus && focusedView == 'workbench.panel.output'"
+  },
+  {
+    "key": "shift+cmd+left",
+    "command": "-cursorWordAccessibilityLeftSelect",
+    "when": "accessibilityModeEnabled && isWindows && textInputFocus && focusedView == 'workbench.panel.output'"
+  },
+  {
+    "key": "cmd+left",
+    "command": "-cursorWordAccessibilityLeft",
+    "when": "accessibilityModeEnabled && isWindows && textInputFocus && focusedView == 'workbench.panel.output'"
+  }
 ]
