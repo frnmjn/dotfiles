@@ -29,11 +29,6 @@ export KERL_CONFIGURE_OPTIONS="--disable-jit --with-ssl=$(brew --prefix openssl@
 # Rust
 export PATH="/Users/emiliofrancischetti/.cargo/bin:$PATH"
 
-# Go
-# export GOPATH=$(asdf where golang)/packages
-# export GOROOT=$(asdf where golang)/go
-# export PATH="${PATH}:$(go env GOPATH)/bin"
-
 # Bin
 export PATH="/Users/emiliofrancischetti/bin:$PATH"
 export PATH="/Users/emiliofrancischetti/.local/bin:$PATH"
@@ -47,11 +42,14 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
 fi
 eval "$(direnv hook zsh)"
 
-# ADSF
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 # Ulimit
 ulimit -n 10240
+
+# Rust on Mac
+export MACOSX_DEPLOYMENT_TARGET=11.3
+
+# Expand ~ in PATH
+export PATH=${PATH//\~/$HOME}
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/emiliofrancischetti/.rd/bin:$PATH"

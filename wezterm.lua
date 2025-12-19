@@ -32,10 +32,14 @@ config.keys = {
   { key = '0',          mods = 'CMD',     action = act.ResetFontSize },
   { key = 'PageUp',                       action = act.ScrollByLine(-10) },
   { key = 'PageDown',                     action = act.ScrollByLine(10) },
+  --  Clear
+  { key = 'l',          mods = 'CMD',     action = act.SendKey { key = 'l', mods = 'CTRL'}, },
+  -- Delete Line
+  { key =  'k', mods = 'CMD',             action = act.SendKey { key = 'u', mods = 'CTRL' }, },
   -- Delete Left Word
-  { key = 'h',  mods = 'ALT',     action = act.SendKey {key = 'w', mods = 'CTRL'} },
+  { key = 'h',  mods = 'ALT',             action = act.SendKey {key = 'w', mods = 'CTRL'} },
   -- Delete Right Word
-  { key = 'l',  mods = 'ALT',     action = act.SendKey {key = 'd', mods = 'ALT'} },
+  { key = 'l',  mods = 'ALT',             action = act.SendKey {key = 'd', mods = 'ALT'} },
 }
 
 return config

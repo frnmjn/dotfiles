@@ -14,8 +14,6 @@ brew "automake"
 brew "gmp"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Extendable version manager with support for Ruby, Node.js, Erlang & more
-brew "asdf"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Official Amazon AWS command-line interface
