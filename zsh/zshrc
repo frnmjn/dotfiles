@@ -30,7 +30,7 @@ export KERL_CONFIGURE_OPTIONS="--disable-jit --with-ssl=$(brew --prefix openssl@
 export PATH="/Users/emiliofrancischetti/.cargo/bin:$PATH"
 
 # Bin
-export PATH="/Users/emiliofrancischetti/bin:$PATH"
+export PATH="/Users/emiliofrancischetti/bin:$PATH":jFgit
 export PATH="/Users/emiliofrancischetti/.local/bin:$PATH"
 
 # VAULT

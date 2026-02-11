@@ -57,7 +57,6 @@ alias kns="kubectl-ns"
 
 # RUST
 alias cc="cargo check"
-alias ct="cargo make test"
 alias cf="cargo fmt"
 alias cm="cargo make"
 alias cmt="cargo make test"

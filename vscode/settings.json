@@ -1,7 +1,7 @@
 {
   "debug.allowBreakpointsEverywhere": true,
   "debug.console.fontSize": 17,
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.maxComputationTime": 0,
   "disable-default-keybinding.runOnChange": false,
   "editor.accessibilitySupport": "off",
@@ -54,12 +54,23 @@
   "workbench.startupEditor": "none",
   "cSpell.userWords": [
     "chrono",
+    "clippy",
+    "dotenv",
+    "dotenvy",
+    "Francischetti",
+    "Graphi",
+    "graphiql",
+    "healthcheck",
     "healthz",
+    "isready",
     "rstest",
     "serde",
     "sqlx",
     "Starsky",
-    "utoipa"
+    "thiserror",
+    "TIMESTAMPTZ",
+    "utoipa",
+    "wundergraph"
   ],
   "diffEditor.hideUnchangedRegions.enabled": true,
   "rust-analyzer.files.exclude": [
@@ -70,6 +81,7 @@
     "*.pdf": "default"
   },
   "FSharp.dotnetRoot": "/usr/local/share/dotnet/",
+  "chat.viewSessions.orientation": "stacked",
   // "rust-analyzer.cargo.features": [
   //   "integration-tests"
   // ],
