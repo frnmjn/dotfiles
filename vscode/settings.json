@@ -40,7 +40,7 @@
   "rust-analyzer.diagnostics.remapPrefix": {},
   "rust-analyzer.inlayHints.bindingModeHints.enable": true,
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
-  "rust-analyzer.inlayHints.discriminantHints.enable": "always",
+"rust-analyzer.inlayHints.discriminantHints.enable": "always",
   "rust-analyzer.inlayHints.parameterHints": true,
   "rust-analyzer.procMacro.enable": true,
   "terminal.external.osxExec": "WezTerm.app",
@@ -70,6 +70,7 @@
     "thiserror",
     "TIMESTAMPTZ",
     "utoipa",
+    "Vianello",
     "wundergraph"
   ],
   "diffEditor.hideUnchangedRegions.enabled": true,
@@ -82,6 +83,7 @@
   },
   "FSharp.dotnetRoot": "/usr/local/share/dotnet/",
   "chat.viewSessions.orientation": "stacked",
+  "workbench.browser.enableChatTools": true,
   // "rust-analyzer.cargo.features": [
   //   "integration-tests"
   // ],
