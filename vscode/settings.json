@@ -28,7 +28,6 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
-  "git.path": "/usr/bin/git",
   "github.copilot.nextEditSuggestions.enabled": true,
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.terminalLinksHandler": "github",
@@ -40,7 +39,7 @@
   "rust-analyzer.diagnostics.remapPrefix": {},
   "rust-analyzer.inlayHints.bindingModeHints.enable": true,
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
-"rust-analyzer.inlayHints.discriminantHints.enable": "always",
+  "rust-analyzer.inlayHints.discriminantHints.enable": "always",
   "rust-analyzer.inlayHints.parameterHints": true,
   "rust-analyzer.procMacro.enable": true,
   "terminal.external.osxExec": "WezTerm.app",
@@ -84,6 +83,8 @@
   "FSharp.dotnetRoot": "/usr/local/share/dotnet/",
   "chat.viewSessions.orientation": "stacked",
   "workbench.browser.enableChatTools": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   // "rust-analyzer.cargo.features": [
   //   "integration-tests"
   // ],
